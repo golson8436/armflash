@@ -1,7 +1,7 @@
 =Using armflash=
 
 
-EXAMPLE:
+*EXAMPLE:*
 
 Programmes devices connected to ttyS0 and ttyUSB0 with selected firmwares at the same time
 	* armflash /dev/ttyS0 firmware1.hex 38400 10000 LPC2103 /dev/ttyUSB0 firmware2.hex 38400 10000 LPC2103
@@ -13,13 +13,13 @@ Detects available serial ports on the system and lists them
 	* armflash -d, armflash --detect_rs232
 
 
-Usage:
+*Usage:*
 	armflash SEQ1 SEQ2 ... OPTIONS
-Where: 
+*Where:*
 
-SEQn:
+*SEQn:*
 	Is in format PORT FIRMWARE BAUDRATE CRYSTAL_HZ DEVICE
-OPTIONS:
+*OPTIONS:*
 	--help (-h)
 	  prints this help
 	--version (-v)
@@ -28,17 +28,17 @@ OPTIONS:
 	  autodetects your serial port devices and lists them. USE THIS OPTION ALONE
 	--dump_binary BINFILE (-b BINFILE)
 	  dumps raw BINFILE data with memory adresses
-PORT:
+*PORT:*
 	Some serial port used to program the device. Use -d to detect available ports
-FIRMWARE:
+*FIRMWARE:*
 	The firmware to program.
 	Supported formats:
 		 - Intel hex 32-bit
-BAUDRATE:
+*BAUDRATE:*
 	Baudrate used to program the device
-CRYSTAL_HZ:
+*CRYSTAL_HZ:*
 	Crystal speed in Hz
-DEVICE:
+*DEVICE:*
 	The processor which we are programming.
 	Currently supported (micro)processors:
 		- LPC2103	(Phillips)
