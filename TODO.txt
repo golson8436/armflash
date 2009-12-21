@@ -1,0 +1,22 @@
+
+---------------------------------------- UNRESOLVED TODOs ----------------------------------------
+
+- 28.12.2008 - NOT RESOLVED
+	According to the man pages the cfsetspeed is non-standard funcion...
+	some other approach would be probably a good idea as we want to support as many
+	architectures/*nixes as possible
+
+- 27.12.2008 - NOT RESOLVED
+	Add ability to change baudrate after construction of CSerial instance
+
+- 27.12.2008 - NOT RESOLVED
+	Make sure intel hex32 classes can actually support 32-bit addressing currently its only 16-bit
+
+----------------------------------------- RESOLVED TODOs -----------------------------------------
+
+- 27.12.2008 VERY HIGH PRIORITY - RESOLVED (28.12.08)
+	Remove warnings: ...but non-virtual destructor
+
+- 27.12.2008 - RESOLVED (29.12.08)
+	Add error checkings in CSerial class for termios functions
+
