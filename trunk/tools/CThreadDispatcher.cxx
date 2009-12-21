@@ -1,0 +1,14 @@
+/*!\file  CThreadDispatcher.cxx		Unused at the moment
+ *
+ *	This file is part of the armflash (arm flashing utility)
+ *  package.
+ *
+ *  Copyright (c) 2008-2009 by Gabriel Zabusek <gabriel.zabusek@gmail.com>
+ *
+ *	This program is free software; you can redistribute it and/or
+ *	modify it under the terms of the GNU General Public License
+ *	as published by the Free Software Foundation; either version
+ *	2 of the License, or (at your option) any later version.
+ */
+
+#include "CThreadDispatcher.h"

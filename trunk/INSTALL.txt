@@ -1,0 +1,9 @@
+To install armflash:
+
+simply unpack the tar
+cd to the arm_flash directory
+and run:
+	make
+	make install
+
+make sure you run make install with the appropriate rights (root is the best option)

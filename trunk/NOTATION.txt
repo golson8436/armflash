@@ -1,0 +1,116 @@
+NOTATION USED IN EVERY FILE
+
+it is based on widely known 
+	Hungarian Notation
+
+---------------------------------------------------------------------------------------------------
+
+BASIC STRUCTURE:
+	prefixName
+
+prefixes:
+	b	...	boolean
+	c	...	count of something
+	dw	...	double word
+	f	...	flag
+	n	...	integer
+	i	...	integer index
+	fp	...	floating point
+	db	...	double
+	p	...	pointer
+	rf	...	reference
+	rg	...	range or array
+	sz	...	zero terminated string
+	u32	...	unsigned 32-bit integer
+	s16	...	signed 16-bit integer (NOTE: you figure out the rest.... s8,u8,...)
+	un	...	unsigned native integer
+	st	...	structure INSTANCE
+	cl	...	class INSTANCE
+	m_	...	private member of class (it is good programming practice not to have public variable
+			members of class!)
+	g_	...	global namespace member
+	s_	...	static class member -> this includes static member functions in classes as well
+	_	...	local variable -> unimportant out of the block
+	fd	...	file descriptor
+
+---------------------------------------------------------------------------------------------------
+
+other rules:
+
+*	we write maximal 100 characters in one source code row
+*	header files include control macros names, ie. for file timer.h we use #ifndef __TIMER_H
+*	class name always starts with the letter C ie: class CMyClass
+*	structure name always starts with the letter S ie: struct SMyStruct
+*	function name should not be cryptic -> like a5d2(int i) -> but self explainatory, new word
+	starts with capital and shouldn't be too long, ie. ReadFileBuffer
+*	we declare class and structs like:
+
+		template< class T > class CMyClass
+		{
+			private:
+				// ...
+			public:
+				// ...
+		};
+
+		typedef struct _SMyStruct
+		{
+			int member;
+			// ...
+		} SMyStruct;
+
+*	we declare functions like:
+
+		int
+		MyFunc( char param1, ... )
+		{
+		}
+
+*	we write basic blocks like:
+
+		if( cond && cond2 && cond3 && ( cond4 || cond5 ) )
+		{
+			for( int i = const; cond; i++ )
+			{
+				// ...
+			}
+		}
+		else
+		{
+			while( cond )
+			{
+				// ...
+				do
+				{
+					// ...
+				} while( cond );
+			}	
+		}
+
+*	we use // for one line comments whithing code so we can still use /* ... */
+	to comment the whole block like:
+
+		/*
+			// if this condition is true
+			// this and that happens
+			// because of this
+			if( cond )
+			{
+				do
+				{
+					this->DoThis();
+				} while( this->DoThat() );
+			}
+		*/
+
+examples:
+
+	char     * pszInputString;
+	CMyClass * pclInstancePointer;
+	CMyClass & rfclReferenceToMC;
+	int    	   nMyNumber;
+	int        cPeopleCount;
+	int        iPeopleArrayIndex;
+
+	etc...
+

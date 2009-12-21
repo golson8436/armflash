@@ -1,0 +1,74 @@
+.\" Process this file with
+.\" groff -man -Tascii armflash.1
+.\"
+.TH ARMFLASH 1 "SEPTEMBER 2009" Linux "User Manuals"
+.SH NAME
+armflash \- universal ARM chips flashing utility.
+.SH SYNOPSIS
+.B armflash [
+.I SEQ1 SEQ2 ...
+.B ] OPTIONS
+.SH SEQx
+.B SEQx
+stands for sequence in format
+.br
+.B PORT FIRMWARE BAUDRATE CRYSTAL_HZ DEVICE
+.br
+The descriptions of how should these elements look follows:
+.br
+.RS
+.B PORT
+is the name of the device on the host computer to which the device to be flashed is connected.
+.br
+.B FIRMWARE
+is the path to the firmware you wish to flash your device with. Currently supported formats are:
+.br
+.RS
+Intel HEX 32-bit
+.RE
+.B BAUDRATE
+is the baudrate you wish to use for flashing the device connected to 
+.B PORT
+.br
+.B CRYSTAL_HZ
+is the speed of the crystal connected to your ARM chip as the main clock source. This is typically between 10000-20000Hz.
+.br
+.B DEVICE
+is the string which identifies which exact ARM device you are flashing. Currently supported are the following:
+.RS
+.B LPC2103
+.RE
+.RE
+.SH DESCRIPTION
+.B armflash
+is a simple command line utility for flashing the ARM chips. It supports parallel flashing of multiple devices. It can be easily integrated into Makefiles for your arm projects for automatic flashing during development. Currently supported devices are:
+.br
+.RS 
+LPC2103 (Phillips semiconductors)
+.br
+LPC2102 (Untested!)
+.br
+LPC2101 (Untested!)
+.RE
+.SH OPTIONS
+.IP "-h (--help)"
+prints the short help.
+.IP "-v (--version)"
+prints the armflash version.
+.IP "-d (--detect_rs232)"
+detects and prints the available serial ports on your system.
+.IP "-b FILE (--dump_binary FILE)"
+dumps raw BINFILE data with memory adresses.
+.SH FILES
+None
+.SH ENVIRONMENT
+None
+.SH DIAGNOSTICS
+None
+.SH BUGS
+None known
+.SH AUTHOR
+Gabriel Zabusek <gabriel.zabusek at gmail dot com>
+.SH "SEE ALSO"
+None
+
